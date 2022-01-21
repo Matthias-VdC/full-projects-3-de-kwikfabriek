@@ -1,1 +1,8 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6759305&assignment_repo_type=AssignmentRepo)
+# BioLab - FP3 - Team De Kwikfabriek
+
+[Vorige repo (Met alle voorgaande commits)](https://github.com/EHB-MCT/FP3-Open-BioLab-Kwikfabriek)
+
+## Instalatie instructies (+ bronnen)
+
+- [Android/IOS Applicatie](https://github.com/EHB-MCT/full-projects-3-de-kwikfabriek/tree/main/app)
+- [ESP](https://github.com/EHB-MCT/full-projects-3-de-kwikfabriek/tree/main/esp)
