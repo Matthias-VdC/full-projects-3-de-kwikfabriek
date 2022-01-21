@@ -1,5 +1,11 @@
+// react
 import React, { Component } from 'react';
+
+// react-native
 import { StyleSheet, Text, View, Button, FlatList, Switch, NativeModules, NativeEventEmitter, } from 'react-native';
+
+// infoViewStyle
+import { mainStyle, infoViewStyle } from '../styles/style';
 
 export default class InfoView extends Component {
 
@@ -9,29 +15,12 @@ export default class InfoView extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.toolbar}>
+      <View style={mainStyle.container}>
+        <View style={mainStyle.toolbar}>
           {/* Hier kunnen er knoppen komen */}
         </View>
-
           {/* Hier komt de body van de pagina */}
-
       </View>
     )
   }
-
 }
-
-// voorlopige stijlen
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  },
-  toolbar:{
-    paddingTop:30,
-    paddingBottom:10,
-    flexDirection:'row'
-  }
-});

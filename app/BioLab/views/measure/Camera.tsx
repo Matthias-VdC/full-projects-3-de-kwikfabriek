@@ -1,8 +1,16 @@
+// react
 import React from 'react';
+
+// react-native
 import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+
+// dependency
 import { RNCamera } from "react-native-camera";
 import { useCamera } from 'react-native-camera-hooks';
 import RNFS from 'react-native-fs';
+
+// cameraStyle
+import { mainStyle, cameraStyle } from '../../styles/style';
 
 
 export default function Camera() {
@@ -35,48 +43,17 @@ export default function Camera() {
     }
   }
 
-
-
-
-
   return (
-    <View style={styles.body}>
+    <View style={cameraStyle.body}>
       <RNCamera
         ref={cameraRef}
         type={RNCamera.Constants.Type.back}
-        style={styles.preview}
+        style={cameraStyle.preview}
       >
         <TouchableHighlight onPress={() => captureHandle()}>
-          <Text style={styles.capturebutton}>Capture</Text>
+          <Text style={cameraStyle.capturebutton}>Capture</Text>
         </TouchableHighlight>
       </RNCamera>
     </View>
   );
-
-
 }
-
-
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-  },
-  preview: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  toolbar: {
-    paddingTop: 30,
-    paddingBottom: 10,
-    flexDirection: 'row'
-  },
-  capturebutton: {
-    color: 'white',
-    backgroundColor: '#1eb900',
-    padding: 10,
-    paddingLeft: 40,
-    paddingRight: 40,
-    marginBottom: 50
-  }
-});
