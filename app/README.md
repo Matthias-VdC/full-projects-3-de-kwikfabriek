@@ -23,7 +23,7 @@
 
 5. Zorg er voor dat je ontwikkelaarsopties (developer options) aanstaat op je GSM.
 6. Als de ontwikkelaarsopties aan staan, schaken **USB-foutopsporing** in
-7. Zorg dat je deze [Instructies]() heb uitgevoerd. Belangrijk: Kies voor **React Native CLI Quickstart** en niet Expo CLI Quickstart. Kies als Target OS: **Android**
+7. Zorg dat je deze [Instructies](https://reactnative.dev/docs/environment-setup) heb uitgevoerd. Belangrijk: Kies voor **React Native CLI Quickstart** en niet Expo CLI Quickstart. Kies als Target OS: **Android**
 8. Als alle voorgaan stappen gedaan zijn: verbind uw smartphone met uw computer met een usb kabel. Voer nadien dit commando in: `npx react-native run-android` om de app te builden en te installeren op uw smartphone.
 
 #### IOS
