@@ -74,3 +74,7 @@ export const incubatorStyle = StyleSheet.create({
     alignSelf: 'center'
   }
 });
+
+export const cameraStyle = StyleSheet.create({
+  
+});
