@@ -1,14 +1,8 @@
-# FP3-Open-BioLab-Kwikfabriek
+# BioLab - FP3 - Team De Kwikfabriek
 
-Vorige repo (Met alle voorgaande commits) -> https://github.com/EHB-MCT/FP3-Open-BioLab-Kwikfabriek
+[Vorige repo (Met alle voorgaande commits)](https://github.com/EHB-MCT/FP3-Open-BioLab-Kwikfabriek)
 
-Bij iedere nieuwe feature -> nieuwe branch aanmaken.
-Feature klaar? mergen naar Develop branch! (Niet naar main/releases)
+## Instalatie instructies (+ bronnen)
 
-
--- DEV --
-
-Installatie instructies:
-
-Voor App -> ga naar map "app"
-Voor ESP (arduino) -> ga naar map "esp"
+- [Android/IOS Applicatie](https://github.com/EHB-MCT/full-projects-3-de-kwikfabriek/tree/main/app)
+- [ESP](https://github.com/EHB-MCT/full-projects-3-de-kwikfabriek/tree/main/esp)
