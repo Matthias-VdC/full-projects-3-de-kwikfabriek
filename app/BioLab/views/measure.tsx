@@ -20,14 +20,14 @@ export default class Measure extends Component<{ navigation: any }> {
           {/* Hier kunnen er knoppen komen */}
         </View>
 
-        <View style={measureStyle.menuContainer}>
+        <View style={mainStyle.menuContainer}>
           {/* Hier komt de body van de pagina */}
 
-          <View style={measureStyle.row}>
+          <View style={mainStyle.row}>
             <Text style={measureStyle.subTitle}>Measure with</Text>
           </View>
 
-          <View style={measureStyle.row}>
+          <View style={mainStyle.row}>
 
             {/* <TouchableHighlight onPress={() =>
                   this.props.navigation.navigate('Incubator', {})
@@ -42,14 +42,14 @@ export default class Measure extends Component<{ navigation: any }> {
             <TouchableHighlight onPress={() =>
               this.props.navigation.navigate('Device', {})
             } underlayColor="white">
-              <View style={measureStyle.menuButton}>
+              <View style={mainStyle.menuButton}>
                 <Text style={measureStyle.menuButtonText}>Device</Text>
               </View>
             </TouchableHighlight>
             <TouchableHighlight onPress={() =>
               this.props.navigation.navigate('Camera', {})
             } underlayColor="white">
-              <View style={measureStyle.menuButton}>
+              <View style={mainStyle.menuButton}>
                 <Text style={measureStyle.menuButtonText}>Camera</Text>
               </View>
             </TouchableHighlight>

@@ -21,7 +21,25 @@ export const mainStyle = StyleSheet.create({
   },
   bottom: {
     bottom: 0,
-  }
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  menuContainer: {
+    padding: 20,
+  },
+  menuButton: {
+    alignItems: 'center',
+    backgroundColor: 'green',
+    padding: 15,
+    alignContent: 'center'
+  },
+  backgroundGradient: {
+    height: "100%",
+    width: "100%"
+  },
 });
 
 
@@ -82,12 +100,8 @@ export const homeStyle = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
+  },
 
-  },
-  backgroundGradient: {
-    height: "100%",
-    width: "100%"
-  },
   menuContainer: {
     padding: 20,
   },

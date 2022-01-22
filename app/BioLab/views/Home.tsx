@@ -22,9 +22,9 @@ export default class Home extends Component<{ navigation: any }> {
 
   render(): React.ReactNode {
     return (
-
+ 
       <View style={homeStyle.container}>
-        <ImageBackground style={homeStyle.backgroundGradient}
+        <ImageBackground style={mainStyle.backgroundGradient}
           source={require("../assets/gradient.png")}>
 
           {/* <LinearGradient colors={['#7F7FD5', '#86A8E7', '#91eae4']}> */}
@@ -46,10 +46,10 @@ export default class Home extends Component<{ navigation: any }> {
             </TouchableHighlight>
           </View>
 
-          <View style={homeStyle.menuContainer}>
+          <View style={mainStyle.menuContainer}>
             {/* Hier komt de body van de pagina */}
 
-            <View style={homeStyle.row}>
+            <View style={mainStyle.row}>
 
               <TouchableHighlight onPress={() =>
                 this.props.navigation.navigate('InfoView', {})
