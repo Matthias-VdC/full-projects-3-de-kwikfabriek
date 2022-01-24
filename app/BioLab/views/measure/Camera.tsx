@@ -1,16 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+
+// react-native
+import { Text, TouchableHighlight, View } from "react-native";
+
+// dependency
 import { RNCamera } from "react-native-camera";
 import { useCamera } from 'react-native-camera-hooks';
 import RNFS from 'react-native-fs';
+import { prominent } from 'color.js';
 
+
+// cameraStyle
+import { mainStyle, cameraStyle } from '../../styles/style';
 
 export default function Camera() {
-  const [{ cameraRef }, { takePicture }] = useCamera(null);
+  const [{ cameraRef }, { takePicture }] = useCamera(undefined);
 
   const captureHandle = async () => {
     try {
-      let widthImg, heightImg;
+      let widthImg: any, heightImg: any;
       const data = await takePicture();
       console.log(data.uri);
       const filePath = data.uri;
@@ -20,16 +28,14 @@ export default function Camera() {
       await RNFS.moveFile(filePath, newFilePath)
         .then(() => {
           console.log('IMAGE MOVED', filePath, '-- to --', newFilePath);
+          console.log("Reading picture...")
+          prominent('filessample.jpg').then((colors: any) =>
+            console.log(colors));
+
         })
         .catch(error => {
           console.log(error);
         })
-
-      // await RNFS.readFile(newFilePath, 'base64')
-      //   .then(res => {
-      //     console.log(res);
-      //   });
-
     } catch (error) {
       console.log(error);
     }
@@ -40,43 +46,21 @@ export default function Camera() {
 
 
   return (
-    <View style={styles.body}>
+    <View style={cameraStyle.body}>
       <RNCamera
         ref={cameraRef}
         type={RNCamera.Constants.Type.back}
-        style={styles.preview}
+        style={cameraStyle.preview}
       >
-        <TouchableHighlight onPress={() => captureHandle()}>
-          <Text style={styles.capturebutton}>Capture</Text>
-        </TouchableHighlight>
       </RNCamera>
+
+      <TouchableHighlight onPress={() => captureHandle()}>
+        <Text style={cameraStyle.capturebutton}>Analyze</Text>
+      </TouchableHighlight>
+
     </View>
   );
 
 
 }
 
-
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-  },
-  preview: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  toolbar: {
-    paddingTop: 30,
-    paddingBottom: 10,
-    flexDirection: 'row'
-  },
-  capturebutton: {
-    color: 'white',
-    backgroundColor: '#1eb900',
-    padding: 10,
-    paddingLeft: 40,
-    paddingRight: 40,
-    marginBottom: 50
-  }
-});
