@@ -1,3 +1,4 @@
 app/BioLab/android/** linguist-vendored
 app/BioLab/ios/** linguist-vendored
+esp/BioLab/lib/** linguist-vendored
 *.tsx linguist-language=Typescript
